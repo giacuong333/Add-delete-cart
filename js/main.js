@@ -27,6 +27,7 @@ const products = [
 
 const categories = [...new Set(products.map(item => item))]
 
+// Render products 
 let i = 0
 document.getElementById('root').innerHTML = categories.map(item => {
           var { image, title, price } = item
@@ -44,20 +45,22 @@ document.getElementById('root').innerHTML = categories.map(item => {
           )
 }).join('')
 
+// cart to accomodate items
 var cart = []
 
+// add to cart
 addToCart = (a) => {
           cart.push({ ...categories[a] })
-          console.log(cart)
           displayCart()
 }
 
+// delete from cart
 deleteItem = (a) => {
           cart.splice(a, 1)
           displayCart()
 }
 
-// This function is used to refresh and display the updated cart
+// refresh and display the updated cart
 displayCart = () => {
           let j = 0
           let total = 0
