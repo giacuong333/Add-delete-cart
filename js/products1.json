@@ -1,0 +1,30 @@
+[
+          {
+                    "id": 0,
+                    "image": "../asset/image/apple-watch.png",
+                    "title": "Apple watch",
+                    "price": 120,
+                    "quantity": 0
+          },
+          {
+                    "id": 1,
+                    "image": "../asset/image/ipone-11.png",
+                    "title": "Iphone 11",
+                    "price": 200,
+                    "quantity": 0
+          },
+          {
+                    "id": 2,
+                    "image": "../asset/image/airpods.png",
+                    "title": "Airpods",
+                    "price": 50,
+                    "quantity": 0
+          },
+          {
+                    "id": 3,
+                    "image": "../asset/image/charger.png",
+                    "title": "Charger",
+                    "price": 30,
+                    "quantity": 0
+          }
+]
