@@ -15,7 +15,7 @@ fetch("../js/products1.json")
 // Get products and cart from localStorage
 const products = JSON.parse(localStorage.getItem("products"))
 let cart = JSON.parse(localStorage.getItem("cart"))
-const categories = [...new Set(products.map(item => item))]
+const categories = [...new Set(products.map(item => item))] // This is used to render products to HTML
 
 // Render products 
 document.getElementById('root').innerHTML = categories.map(item => {
@@ -36,10 +36,12 @@ document.getElementById('root').innerHTML = categories.map(item => {
 
 // Add the product to the cart
 function addItemToCart(productId) {
+          // Find id of the product wants to add 
           const product = products.find(product => {
                     return product.id === productId
           })
 
+          // If there is no product in the product list
           if (!product) {
                     console.error("Product not found!")
                     return;
@@ -94,7 +96,7 @@ displayCart = () => {
           document.getElementById('count').innerHTML = totalQuantity
 
           if (cart.length === 0) {
-                    document.getElementById('cart-item').innerHTML = "Your cart is empty"
+                    cartContainer.innerHTML = "Your cart is empty"
           } else {
                     cartContainer.innerHTML = "" // clear the previous content before updating new contents
 
